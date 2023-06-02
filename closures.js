@@ -1,0 +1,9 @@
+// CLOSURES: A closure is a function that has access to the parent scope, even after the parent function has closed. JS will automatically store the state of a closure in the heap memory, even after the parent function has returned. This behavior makes them useful for encapsulating private variables. Closures are also used in callback functions and IIFE's.
+
+function encapsulatedState(x) {
+	let state = 10;
+	return function () {
+		state += x;
+		return state;
+	};
+}
